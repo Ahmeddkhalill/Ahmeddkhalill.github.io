@@ -1,4 +1,4 @@
-import { AfterViewInit, Component, OnDestroy, inject, signal } from '@angular/core';
+﻿import { AfterViewInit, Component, HostListener, OnDestroy, inject, signal } from '@angular/core';
 import { AnalyticsService } from './analytics.service';
 import { ARROW, CHECK, FACTS, JOBS, LEARNING, LINKS, NAV, PROJECTS, SKILLS, SOCIALS, STATS } from './data';
 
@@ -23,11 +23,21 @@ export class App implements AfterViewInit, OnDestroy {
     document.documentElement.dataset['theme'] === 'light' ? 'light' : 'dark',
   );
   protected readonly active = signal('');
+  protected readonly menuOpen = signal(false);
 
   private observers: IntersectionObserver[] = [];
 
   constructor() {
     inject(AnalyticsService).init();
+  }
+
+  protected closeMenu(): void {
+    this.menuOpen.set(false);
+  }
+
+  @HostListener('document:keydown.escape')
+  protected onEscape(): void {
+    this.closeMenu();
   }
 
   protected toggleTheme(): void {

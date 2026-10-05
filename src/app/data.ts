@@ -1,4 +1,4 @@
-export const PAL = ['#818CF8', '#A78BFA', '#22D3EE', '#34D399', '#FBBF24'];
+﻿export const PAL = ['#818CF8', '#A78BFA', '#22D3EE', '#34D399', '#FBBF24'];
 
 export interface Tag { t: string; c: string; }
 const tg = (a: string[]): Tag[] => a.map((t, i) => ({ t, c: PAL[i % PAL.length] }));
@@ -12,11 +12,11 @@ export const LINKS = {
 };
 
 export const NAV = [
-  { id: 'about', label: 'About' },
-  { id: 'skills', label: 'Skills' },
-  { id: 'experience', label: 'Experience' },
-  { id: 'projects', label: 'Projects' },
-  { id: 'contact', label: 'Contact' },
+  { id: 'about', d: 'M12 12a4 4 0 1 0 0-8 4 4 0 0 0 0 8zM4 21a8 8 0 0 1 16 0', label: 'About' },
+  { id: 'skills', d: 'm16 18 6-6-6-6M8 6l-6 6 6 6', label: 'Skills' },
+  { id: 'experience', d: 'M5 7h14a2 2 0 0 1 2 2v9a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V9a2 2 0 0 1 2-2zM8 7V5a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2', label: 'Experience' },
+  { id: 'projects', d: 'M4 3h5a1 1 0 0 1 1 1v5a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1V4a1 1 0 0 1 1-1zM15 3h5a1 1 0 0 1 1 1v5a1 1 0 0 1-1 1h-5a1 1 0 0 1-1-1V4a1 1 0 0 1 1-1zM4 14h5a1 1 0 0 1 1 1v5a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1v-5a1 1 0 0 1 1-1zM15 14h5a1 1 0 0 1 1 1v5a1 1 0 0 1-1 1h-5a1 1 0 0 1-1-1v-5a1 1 0 0 1 1-1z', label: 'Projects' },
+  { id: 'contact', d: 'M5 5h14a2 2 0 0 1 2 2v10a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V7a2 2 0 0 1 2-2zM3 7l9 6 9-6', label: 'Contact' },
 ];
 
 export const STATS = [

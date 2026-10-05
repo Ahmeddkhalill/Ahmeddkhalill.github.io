@@ -1,12 +1,12 @@
-<a class="skip" href="#main">Skip to content</a>
+﻿<a class="skip" href="#main">Skip to content</a>
 <div class="blobs" aria-hidden="true"><div class="blob b1"></div><div class="blob b2"></div><div class="blob b3"></div><div class="blob b4"></div><div class="blob b5"></div></div>
 <div class="page">
   <header class="site">
     <div class="wrap nav-in">
       <a class="brand" href="#top">Ahmed Khalil</a>
-      <nav class="primary" aria-label="Primary">
+      <nav class="primary" id="primary-nav" aria-label="Primary" [class.open]="menuOpen()" (click)="closeMenu()">
         @for (n of nav; track n.id) {
-          <a class="nl" [href]="'#' + n.id" [attr.aria-current]="active() === n.id ? 'true' : null">{{ n.label }}</a>
+          <a class="nl" [href]="'#' + n.id" [attr.aria-current]="active() === n.id ? 'true' : null"><svg class="nl-ic" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path [attr.d]="n.d" /></svg><span>{{ n.label }}</span></a>
         }
       </nav>
       <div class="nav-actions">
