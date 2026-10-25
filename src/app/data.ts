@@ -20,7 +20,7 @@ export const NAV = [
 ];
 
 export const STATS = [
-  { n: '8', l: 'projects' },
+  { n: '9', l: 'projects' },
   { n: '500+', l: 'NuGet downloads' },
   { n: '2026', l: 'Computer Science graduate' },
   { n: 'Cairo, Egypt', l: 'location' },
@@ -51,6 +51,7 @@ export const JOBS = [
 
 export interface Project { m: string; title: string; sub: string; href: string; label: string; demo?: string; tags: Tag[]; bullets: string[]; }
 export const PROJECTS: Project[] = [
+  { m: 'SO', title: 'Songify', sub: 'Personal project', href: 'https://github.com/Ahmeddkhalill/songify', label: 'Code', demo: 'https://songify-blue.vercel.app', tags: tg(['.NET 10', 'ASP.NET Core', 'EF Core', 'PostgreSQL', 'Docker', 'React', 'TypeScript', 'Tailwind CSS', 'xUnit', 'Testcontainers', 'GitHub Actions']), bullets: ['Create a playlist, search a shared song catalog, add tracks, drag to reorder, and play previews that keep going as you move between pages.', 'Clean Architecture on .NET 10 and PostgreSQL, React 19 front end, 73 tests running in CI.'] },
   { m: 'MA', title: 'MedAI Healthcare Platform', sub: 'Graduation project, team of 6', href: 'https://github.com/Ahmeddkhalill/MedAI', label: 'Code', demo: 'https://med-ai-pi-orpin.vercel.app/', tags: tg(['C#', 'ASP.NET Core', 'EF Core', 'JWT', 'SQLite', 'PyTorch integration']), bullets: ['34-endpoint ASP.NET Core API with EF Core, Identity, and JWT role-based access for patients, doctors, and admins.', 'Integrates a PyTorch X-ray classification model over HTTP, with a doctor review workflow to confirm or override AI results.', 'Appointment booking with slot capacity, overlap protection, and double-booking prevention.'] },
   { m: 'TT', title: 'Trainers Team Website', sub: 'Team project, 9+ months', href: 'https://trainers-team.com', label: 'Live site', tags: tg(['PHP', 'HTML', 'CSS', 'JS', 'Bootstrap', 'SQL Server']), bullets: ['Training platform offering professional programs in project management, memory improvement, critical thinking, and Training of Trainers (TOT), with online and offline courses showing duration, objectives, and trainers.', '43+ screens built by a team of four over 9+ months, with Fawry payment integration.'] },
   { m: 'SM', title: 'Survey Management System', sub: 'Personal project', href: 'https://github.com/Ahmeddkhalill/SurveyManagement', label: 'Code', tags: tg(['ASP.NET Core', 'Hangfire', 'SQL Server', 'HybridCache', 'API versioning']), bullets: ['38-endpoint polling API with a custom permission-based authorization policy provider, JWT refresh tokens, and account lockout.', 'Hangfire background and recurring jobs, MailKit email templates, HybridCache, rate limiting, API versioning, and health checks.'] },
